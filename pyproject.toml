@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robot-dataset-crash-lab"
+version = "0.1.0a1"
+description = "Test des enregistrements interrompus · Interrupted recording tests · Pruebas de grabaciones interrumpidas"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+mcap = ["mcap==1.6.0"]
+
+[project.scripts]
+robot-crash = "robot_crash.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["robot_crash*"]
+
+[tool.setuptools.package-data]
+robot_crash = ["web/*", "examples/*"]

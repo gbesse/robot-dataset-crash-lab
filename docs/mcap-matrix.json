@@ -1,0 +1,388 @@
+{
+  "synthetic_sensor_data": true,
+  "frame_encoding": "mcap",
+  "real_process_kills": 8,
+  "trials": [
+    {
+      "protocol": "safe",
+      "signal": "SIGKILL",
+      "returncode": -9,
+      "checkpoint": "after_frames",
+      "events": [
+        {
+          "checkpoint": "after_frames"
+        }
+      ],
+      "snapshot": {
+        "valid": true,
+        "visible_episodes": 0,
+        "readable_episodes": 0,
+        "frame_count": 0,
+        "episodes": [],
+        "errors": [],
+        "orphan_artifact_count": 0,
+        "staging_count": 1,
+        "explicit_dataset_writes": false
+      },
+      "resumed": {
+        "valid": true,
+        "visible_episodes": 3,
+        "readable_episodes": 3,
+        "frame_count": 12,
+        "episodes": [
+          {
+            "episode": 0,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 1,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 2,
+            "frame_count": 4,
+            "synthetic": true
+          }
+        ],
+        "errors": [],
+        "orphan_artifact_count": 0,
+        "staging_count": 1,
+        "explicit_dataset_writes": false
+      }
+    },
+    {
+      "protocol": "safe",
+      "signal": "SIGKILL",
+      "returncode": -9,
+      "checkpoint": "after_images",
+      "events": [
+        {
+          "checkpoint": "after_frames"
+        },
+        {
+          "checkpoint": "after_images"
+        }
+      ],
+      "snapshot": {
+        "valid": true,
+        "visible_episodes": 0,
+        "readable_episodes": 0,
+        "frame_count": 0,
+        "episodes": [],
+        "errors": [],
+        "orphan_artifact_count": 0,
+        "staging_count": 1,
+        "explicit_dataset_writes": false
+      },
+      "resumed": {
+        "valid": true,
+        "visible_episodes": 3,
+        "readable_episodes": 3,
+        "frame_count": 12,
+        "episodes": [
+          {
+            "episode": 0,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 1,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 2,
+            "frame_count": 4,
+            "synthetic": true
+          }
+        ],
+        "errors": [],
+        "orphan_artifact_count": 0,
+        "staging_count": 1,
+        "explicit_dataset_writes": false
+      }
+    },
+    {
+      "protocol": "safe",
+      "signal": "SIGKILL",
+      "returncode": -9,
+      "checkpoint": "after_artifact_publish",
+      "events": [
+        {
+          "checkpoint": "after_frames"
+        },
+        {
+          "checkpoint": "after_images"
+        },
+        {
+          "checkpoint": "after_artifact_publish"
+        }
+      ],
+      "snapshot": {
+        "valid": true,
+        "visible_episodes": 0,
+        "readable_episodes": 0,
+        "frame_count": 0,
+        "episodes": [],
+        "errors": [],
+        "orphan_artifact_count": 1,
+        "staging_count": 0,
+        "explicit_dataset_writes": false
+      },
+      "resumed": {
+        "valid": true,
+        "visible_episodes": 3,
+        "readable_episodes": 3,
+        "frame_count": 12,
+        "episodes": [
+          {
+            "episode": 0,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 1,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 2,
+            "frame_count": 4,
+            "synthetic": true
+          }
+        ],
+        "errors": [],
+        "orphan_artifact_count": 1,
+        "staging_count": 0,
+        "explicit_dataset_writes": false
+      }
+    },
+    {
+      "protocol": "safe",
+      "signal": "SIGKILL",
+      "returncode": -9,
+      "checkpoint": "after_metadata_publish",
+      "events": [
+        {
+          "checkpoint": "after_frames"
+        },
+        {
+          "checkpoint": "after_images"
+        },
+        {
+          "checkpoint": "after_artifact_publish"
+        },
+        {
+          "checkpoint": "after_metadata_publish"
+        }
+      ],
+      "snapshot": {
+        "valid": true,
+        "visible_episodes": 1,
+        "readable_episodes": 1,
+        "frame_count": 4,
+        "episodes": [
+          {
+            "episode": 0,
+            "frame_count": 4,
+            "synthetic": true
+          }
+        ],
+        "errors": [],
+        "orphan_artifact_count": 0,
+        "staging_count": 0,
+        "explicit_dataset_writes": false
+      },
+      "resumed": {
+        "valid": true,
+        "visible_episodes": 3,
+        "readable_episodes": 3,
+        "frame_count": 12,
+        "episodes": [
+          {
+            "episode": 0,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 1,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 2,
+            "frame_count": 4,
+            "synthetic": true
+          }
+        ],
+        "errors": [],
+        "orphan_artifact_count": 0,
+        "staging_count": 0,
+        "explicit_dataset_writes": false
+      }
+    },
+    {
+      "protocol": "metadata_first",
+      "signal": "SIGKILL",
+      "returncode": -9,
+      "checkpoint": "after_frames",
+      "events": [
+        {
+          "checkpoint": "after_metadata_publish"
+        },
+        {
+          "checkpoint": "after_frames"
+        }
+      ],
+      "snapshot": {
+        "valid": false,
+        "visible_episodes": 1,
+        "readable_episodes": 0,
+        "frame_count": 0,
+        "episodes": [],
+        "errors": [
+          {
+            "code": "missing_artifact",
+            "episode": 0
+          }
+        ],
+        "orphan_artifact_count": 0,
+        "staging_count": 1,
+        "explicit_dataset_writes": false
+      },
+      "resumed": null
+    },
+    {
+      "protocol": "metadata_first",
+      "signal": "SIGKILL",
+      "returncode": -9,
+      "checkpoint": "after_images",
+      "events": [
+        {
+          "checkpoint": "after_metadata_publish"
+        },
+        {
+          "checkpoint": "after_frames"
+        },
+        {
+          "checkpoint": "after_images"
+        }
+      ],
+      "snapshot": {
+        "valid": false,
+        "visible_episodes": 1,
+        "readable_episodes": 0,
+        "frame_count": 0,
+        "episodes": [],
+        "errors": [
+          {
+            "code": "missing_artifact",
+            "episode": 0
+          }
+        ],
+        "orphan_artifact_count": 0,
+        "staging_count": 1,
+        "explicit_dataset_writes": false
+      },
+      "resumed": null
+    },
+    {
+      "protocol": "metadata_first",
+      "signal": "SIGKILL",
+      "returncode": -9,
+      "checkpoint": "after_artifact_publish",
+      "events": [
+        {
+          "checkpoint": "after_metadata_publish"
+        },
+        {
+          "checkpoint": "after_frames"
+        },
+        {
+          "checkpoint": "after_images"
+        },
+        {
+          "checkpoint": "after_artifact_publish"
+        }
+      ],
+      "snapshot": {
+        "valid": true,
+        "visible_episodes": 1,
+        "readable_episodes": 1,
+        "frame_count": 4,
+        "episodes": [
+          {
+            "episode": 0,
+            "frame_count": 4,
+            "synthetic": true
+          }
+        ],
+        "errors": [],
+        "orphan_artifact_count": 0,
+        "staging_count": 0,
+        "explicit_dataset_writes": false
+      },
+      "resumed": {
+        "valid": true,
+        "visible_episodes": 3,
+        "readable_episodes": 3,
+        "frame_count": 12,
+        "episodes": [
+          {
+            "episode": 0,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 1,
+            "frame_count": 4,
+            "synthetic": true
+          },
+          {
+            "episode": 2,
+            "frame_count": 4,
+            "synthetic": true
+          }
+        ],
+        "errors": [],
+        "orphan_artifact_count": 0,
+        "staging_count": 0,
+        "explicit_dataset_writes": false
+      }
+    },
+    {
+      "protocol": "metadata_first",
+      "signal": "SIGKILL",
+      "returncode": -9,
+      "checkpoint": "after_metadata_publish",
+      "events": [
+        {
+          "checkpoint": "after_metadata_publish"
+        }
+      ],
+      "snapshot": {
+        "valid": false,
+        "visible_episodes": 1,
+        "readable_episodes": 0,
+        "frame_count": 0,
+        "episodes": [],
+        "errors": [
+          {
+            "code": "missing_artifact",
+            "episode": 0
+          }
+        ],
+        "orphan_artifact_count": 0,
+        "staging_count": 1,
+        "explicit_dataset_writes": false
+      },
+      "resumed": null
+    }
+  ],
+  "safe_protocol_passed": true,
+  "broken_control_detected": true,
+  "power_loss_tested": false,
+  "lerobot_native_backend_tested": false
+}
