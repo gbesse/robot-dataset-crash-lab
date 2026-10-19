@@ -1,0 +1,4 @@
+include README*.md LICENSE package.json package-lock.json
+recursive-include tests *.py *.mjs
+recursive-include .github *.yml
+recursive-include docs *.png *.json *.html

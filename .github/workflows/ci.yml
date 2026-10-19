@@ -1,0 +1,51 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  solver:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install ".[mcap]" build
+      - run: python -m unittest discover -s tests -v
+      - run: python -m robot_crash demo --lang fr > proof.json
+      - run: python -m build
+      - name: Verify installed wheel outside source tree
+        run: |
+          python -m venv /tmp/robot-wheel
+          /tmp/robot-wheel/bin/pip install dist/*.whl
+          cd /tmp
+          /tmp/robot-wheel/bin/python -m robot_crash demo --lang es
+      - uses: actions/upload-artifact@v4
+        with:
+          name: robot-package-${{ matrix.python }}
+          path: |
+            dist/
+            proof.json
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: pip install ".[mcap]"
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run format:check
+      - run: npm run test:browser
+      - uses: actions/upload-artifact@v4
+        with:
+          name: browser-preview
+          path: .local/preview-fr.png
